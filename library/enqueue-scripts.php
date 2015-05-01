@@ -34,6 +34,11 @@ if ( ! function_exists( 'foundationpress_scripts' ) ) :
 	}
 
 	add_action( 'wp_enqueue_scripts', 'foundationpress_scripts' );
+	
+	add_action( 'after_setup_theme', 'woocommerce_support' );
+	function woocommerce_support() {
+	    add_theme_support( 'woocommerce' );
+	}
 endif;
 
 ?>
